@@ -10,15 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.app.tasks.ui.pages.editor.TasksEditorPage
 import com.app.tasks.ui.pages.main.MainPage
-import com.app.tasks.ui.pages.settings.SettingsAbout
-import com.app.tasks.ui.pages.settings.SettingsAboutLicence
-import com.app.tasks.ui.pages.settings.SettingsAppearance
-import com.app.tasks.ui.pages.settings.SettingsData
-import com.app.tasks.ui.pages.settings.SettingsDataCategory
-import com.app.tasks.ui.pages.settings.SettingsDeveloperOptions
-import com.app.tasks.ui.pages.settings.SettingsDeveloperOptionsPadding
-import com.app.tasks.ui.pages.settings.SettingsInterface
-import com.app.tasks.ui.pages.settings.SettingsMain
+import com.app.tasks.ui.pages.settings.*
 import com.app.tasks.ui.theme.materialSharedAxisXIn
 import com.app.tasks.ui.theme.materialSharedAxisXOut
 import com.app.tasks.ui.viewmodels.MainViewModel
@@ -124,7 +116,6 @@ fun TasksNavigation(
 
             composable(TasksScreen.SettingsAbout.name) {
                 SettingsAbout(
-                    toLicencePage = { navController.navigate(TasksScreen.SettingsAboutLicence.name) },
                     toDevPage = { navController.navigate(TasksScreen.SettingsDev.name) },
                     onNavigateUp = { navController.navigateUp() },
                 )

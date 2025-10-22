@@ -3,7 +3,7 @@
     <string name="page_settings">Settings</string>
     <string name="action_add_task">Add Task</string>
     <string name="tip_no_task">There are no tasks to complete at the moment.\nTake a good rest!</string>
-    <string name="placeholder_add_todo">Task content</string>
+    <string name="placeholder_add_tasks">Task content</string>
     <string name="action_cancel">Cancel</string>
     <string name="action_save">Save</string>
     <string name="error_no_content_entered">No content entered</string>
@@ -68,7 +68,7 @@
     <string name="pref_interface_interaction_desc">To-Do List, Haptic Feedback</string>
     <string name="pref_show_completed">Show Completed Tasks</string>
     <string name="pref_show_completed_desc">Show completed tasks in to-do list</string>
-    <string name="pref_category_todo_list">To-Do List</string>
+    <string name="pref_category_tasks_list">To-Do List</string>
     <string name="pref_view_on_github">View On GitHub</string>
     <string name="pref_view_on_github_desc">View source code, submit bug reports, and improvement suggestions</string>
     <string name="tip_discard_changes">After exiting edit mode, you will not be able to retrieve the data you have modified. Are you sure you want to exit editing?</string>

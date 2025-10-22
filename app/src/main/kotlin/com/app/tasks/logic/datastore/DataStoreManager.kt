@@ -8,7 +8,7 @@ import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.app.tasks.TasksApp
+import com.app.tasks.*
 import com.app.tasks.constants.Constants
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -27,7 +27,7 @@ object DataStoreManager {
         }
     )
 
-    val dataStore = TasksApp.context.dataStore
+    val dataStore = Tasks.context.dataStore
 
     private val DYNAMIC_COLOR = booleanPreferencesKey(Constants.PREF_DYNAMIC_COLOR)
     private val PALETTE_STYLE = intPreferencesKey(Constants.PREF_PALETTE_STYLE)

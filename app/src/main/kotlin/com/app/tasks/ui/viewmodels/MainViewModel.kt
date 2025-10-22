@@ -74,11 +74,11 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    fun setEditTodoItem(toDo: TodoEntity?) {
+    fun setEditTodoItem(toDo: TasksEntity?) {
         selectedEditTodo = toDo
     }
 
-    fun toggleTodoSelection(toDo: TodoEntity) {
+    fun toggleTodoSelection(toDo: TasksEntity) {
         _selectedTodoIds.update { idList ->
             if (idList.contains(toDo.id)) {
                 idList - toDo.id
