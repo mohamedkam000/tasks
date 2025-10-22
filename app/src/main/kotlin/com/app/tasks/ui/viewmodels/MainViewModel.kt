@@ -7,7 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.app.tasks.TasksApp
+import com.app.tasks.*
 import com.app.tasks.constants.Constants
 import com.app.tasks.logic.Repository
 import com.app.tasks.logic.database.TasksEntity
@@ -50,7 +50,7 @@ class MainViewModel : ViewModel() {
         }
 
     val showConfetti = mutableStateOf(false)
-    var selectedEditTodo by mutableStateOf<TodoEntity?>(null)
+    var selectedEditTodo by mutableStateOf<TasksEntity?>(null)
         private set
 
     private val _selectedTodoIds = MutableStateFlow(listOf<Int>())
@@ -78,7 +78,7 @@ class MainViewModel : ViewModel() {
         selectedEditTodo = toDo
     }
 
-    fun toggleTodoSelection(toDo: TasksEntity) {
+    fun toggleTodoSelection(toDo: TodoEntity) {
         _selectedTodoIds.update { idList ->
             if (idList.contains(toDo.id)) {
                 idList - toDo.id
@@ -141,7 +141,7 @@ class MainViewModel : ViewModel() {
     }
 
     private fun getBackupFiles(context: Context): List<File> {
-        val dbPath = TasksApp.db.openHelper.writableDatabase.path
+        val dbPath = Tasks.db.openHelper.writableDatabase.path
         val prefPath = "${context.filesDir}/datastore"
         return listOf(
             context.getDatabasePath(Constants.DB_NAME),
